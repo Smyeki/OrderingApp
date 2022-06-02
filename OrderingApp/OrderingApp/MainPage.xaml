@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OrderingApp.MainPage"
+             Title="{Binding Name}">
+
+    <StackLayout>
+        <Label Text=" Name: "
+               FontSize="20"
+               FontAttributes="Italic"/>
+        <Entry Text="{Binding Name}"/>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Gender"
+                   FontSize="20"
+                   FontAttributes="Italic"/>
+                <CheckBox x:Name ="checkboxf"/>
+            <Label Text=" female"
+                       FontSize="15"
+                       FontAttributes="Italic">3
+                <Label.Triggers>
+                    <DataTrigger TargetType="Label"
+                                 Binding="{Binding Source= {x:Reference checkboxf},Path= IsChecked}"
+                                 Value="true">
+                        <Setter Property="FontAttributes"
+                                Value="Italic"/>
+                    </DataTrigger>
+                </Label.Triggers>
+            </Label>
+
+           
+            <CheckBox x:Name ="checkboxn"/>
+            <Label Text=" male"
+                       FontSize="15"
+                       FontAttributes="Italic">
+                <Label.Triggers>
+                    <DataTrigger TargetType="Label"
+                                 Binding="{Binding Source= {x:Reference checkboxn},Path= IsChecked}"
+                                 Value="true">
+                        <Setter Property="FontAttributes"
+                                Value="Italic"/>
+                    </DataTrigger>
+                </Label.Triggers>
+            </Label>
+        </StackLayout>
+
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Size"
+                   FontSize="20"
+                   FontAttributes="Italic"/>
+            <CheckBox x:Name ="checkboxs"/>
+            <Label Text=" s"
+                       FontSize="15"
+                       FontAttributes="Italic">
+                <Label.Triggers>
+                    <DataTrigger TargetType="Label"
+                                 Binding="{Binding Source= {x:Reference checkboxs},Path= IsChecked}"
+                                 Value="true">
+                        <Setter Property="FontAttributes"
+                                Value="Italic"/>
+                    </DataTrigger>
+                </Label.Triggers>
+            </Label>
+
+
+            <CheckBox x:Name ="checkboxm"/>
+            <Label Text="m"
+                       FontSize="15"
+                       FontAttributes="Italic">
+                <Label.Triggers>
+                    <DataTrigger TargetType="Label"
+                                 Binding="{Binding Source= {x:Reference checkboxm},Path= IsChecked}"
+                                 Value="true">
+                        <Setter Property="FontAttributes"
+                                Value="Italic"/>
+                        
+                        
+                    </DataTrigger>
+                </Label.Triggers>
+            </Label>
+
+            <CheckBox x:Name ="checkboxl"/>
+            <Label Text="l"
+                       FontSize="15"
+                       FontAttributes="Italic">
+                <Label.Triggers>
+                    <DataTrigger TargetType="Label"
+                                 Binding="{Binding Source= {x:Reference checkboxl},Path= IsChecked}"
+                                 Value="true">
+                        <Setter Property="FontAttributes"
+                                Value="Italic"/>
+
+
+                    </DataTrigger>
+                </Label.Triggers>
+            </Label>
+
+            <CheckBox x:Name ="checkboxXl"/>
+            <Label Text="xl"
+                       FontSize="15"
+                       FontAttributes="Italic">
+                <Label.Triggers>
+                    <DataTrigger TargetType="Label"
+                                 Binding="{Binding Source= {x:Reference checkboxXl},Path= IsChecked}"
+                                 Value="true">
+                        <Setter Property="FontAttributes"
+                                Value="Italic"/>
+
+
+                    </DataTrigger>
+                </Label.Triggers>
+            </Label>
+        </StackLayout>
+        <Label Text="Colour"
+               FontSize="20"
+               FontAttributes="Italic"/>
+        
+
+        <muxc:ColorPicker />
+
+
+
+
+    </StackLayout>
+    
+</ContentPage>
